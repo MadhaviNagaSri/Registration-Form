@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+	<style>
+       .container{
+		height: 500px;
+		width: 450px;
+		background-color: aqua;
+	   }
+       body {
+            font-family:serif;
+            margin: 0;
+            padding: 0;
+        }
+        input[type="submit"] {
+            background-color: rgb(2,158,255);
+            color:white;
+            cursor: pointer;
+            padding: 8px;
+            border: none;
+            border-radius: 15px;
+            font-size: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color:rgb(108,199,255);
+        }
+        input[type="submit"]:hover{
+                box-shadow:5px 5px 10px rgba(0,0,0,0.18);
+            }
+	</style>
+</head>
+<body>
+  <h1>WellCome To Sample Form</h1>
+ <form id="register" action="register.php" method="post">
+     <fieldset class="container">
+         <legend>Registration Details</legend>
+		 <table>
+           <tr>
+             <td><label for="fname"> ENTER FNAME:</label></td>
+             <td><input type="text" id="fname" name="fname" required></td>
+		  </tr><br><br>
+          <tr>
+		      <td><label for="lname">ENTER LNAME:</label></td>
+			  <td><input type="text" id="lname" name="lname" required></td>
+		 </tr>
+		 <tr>
+		     <td><label for="Rollno">ENTER ROLLNO:</label></td>
+			 <td><input type="text" id="Rollno" name="rollno" required></td>
+		 </tr>
+         <tr>
+			 <td><label for="email">ENTER EMAIL:</label></td>
+		     <td><input type="text" id="email" name="email"></td>
+		 </tr>
+		 <tr>
+			 <td>GENDER :</td>
+			 <td>
+				 <input type="radio" id="Male" name="gender" value="M">
+			     <label for="Male">MALE</label><br>
+				 <input type="radio" id="Female" name="gender" value="F">
+				 <label for="Female">FEMALE</label>
+			 </td>
+		 </tr>
+		 <tr>
+			 <td> INTRESTS :</td>
+			 <td>
+				 <input type="checkbox" id="coding" name="intrests[]" value="coding">
+				 <label for="coding">CODING</label>
+				 <input type="checkbox" id="reading" name="intrests[]" value="reading">
+				 <label for="reading">READING</label>
+				 <input type="checkbox" id="learning" name="intrests[]" value="learning">
+			     <label for="learning">LEARNING</label><br>
+			     <label for="Branch">BRANCH</label>
+			 </td>
+		 </tr>
+		 </table>
+		 <select id="Branch" name="Branch">
+			 <option value="CSE">CSE</option>
+			 <option value="ECE">ECE</option>
+			 <option value="AIDS">AIDS</option>
+			 <option value="IT">IT</option>
+		  </select>
+		  <input type="Submit" value="Submit">
+      </fieldset>
+    </form>
+</body>
+</html>
